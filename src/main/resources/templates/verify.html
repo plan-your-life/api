@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        html{
+            font-family: 'Roboto', sans-serif;
+        }
+        p {
+            font-size: 20px;
+        }
+        .button {
+            background-color: #5882FA; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<p style="text-align: center">
+    <img style="width:250px" src="https://i.ibb.co/DLj6kz5/Logo-without-white.png" alt="Logo-without-white" border="0">
+</p>
+<p style="text-align: center;">Hello, <span th:text="${user}"></span> <br> thank you for your registration. To activate your account, please click the button.</p>
+<p style="text-align: center">
+    <a th:href="${message}" class="button">Activate</a>
+</p>
+</body>
+</html>

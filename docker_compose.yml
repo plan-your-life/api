@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web:
+    build: ./path/to/jardockerfile
+    restart: always
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      - mysql
+  mysql:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_DATABASE: mydatabase
+      MYSQL_HOST: mydatabase
+      MYSQL_PASSWORD: mysql
+      MYSQL_USER: mysql
+    volumes:
+      - database:/var/lib/mysql
+volumes:
+  database:
