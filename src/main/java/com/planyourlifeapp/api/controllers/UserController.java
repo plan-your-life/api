@@ -3,8 +3,8 @@ package com.planyourlifeapp.api.controllers;
 
 import com.planyourlifeapp.api.models.Feed;
 import com.planyourlifeapp.api.models.User;
-import com.planyourlifeapp.api.repositorys.FeedRepository;
-import com.planyourlifeapp.api.repositorys.UserRepository;
+import com.planyourlifeapp.api.repository.FeedRepository;
+import com.planyourlifeapp.api.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,10 +12,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.List;
-import java.util.Set;
 
 @RestController
-@RequestMapping(value="/user")
+@RequestMapping(value="/api/v1/user")
 public class UserController {
 
     private UserRepository userRepository;
