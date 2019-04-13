@@ -1,4 +1,4 @@
-package com.planyourlifeapp.api.repositorys;
+package com.planyourlifeapp.api.repository;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 import com.planyourlifeapp.api.models.User;

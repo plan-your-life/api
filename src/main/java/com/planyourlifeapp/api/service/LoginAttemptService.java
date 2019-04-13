@@ -1,4 +1,4 @@
-package com.planyourlifeapp.api.services;
+package com.planyourlifeapp.api.service;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;

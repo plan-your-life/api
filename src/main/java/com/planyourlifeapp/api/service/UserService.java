@@ -1,10 +1,10 @@
-package com.planyourlifeapp.api.services;
+package com.planyourlifeapp.api.service;
 
 
 import com.planyourlifeapp.api.models.Role;
 import com.planyourlifeapp.api.models.User;
 import com.planyourlifeapp.api.models.VerifyUser;
-import com.planyourlifeapp.api.repositorys.UserRepository;
+import com.planyourlifeapp.api.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -12,7 +12,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 import java.util.Date;
 

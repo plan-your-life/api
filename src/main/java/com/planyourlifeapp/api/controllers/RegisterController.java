@@ -3,29 +3,32 @@ package com.planyourlifeapp.api.controllers;
 
 import com.planyourlifeapp.api.models.User;
 import com.planyourlifeapp.api.models.VerifyUser;
-import com.planyourlifeapp.api.repositorys.UserRepository;
-import com.planyourlifeapp.api.repositorys.VerifyUserRepository;
-import com.planyourlifeapp.api.services.EmailServiceImpl;
-import com.planyourlifeapp.api.services.UserService;
+import com.planyourlifeapp.api.repository.UserRepository;
+import com.planyourlifeapp.api.repository.VerifyUserRepository;
+import com.planyourlifeapp.api.service.EmailService;
+import com.planyourlifeapp.api.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.Date;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
+@RequestMapping("/api/v1")
 public class RegisterController {
 
     private UserRepository userRepository;
     private VerifyUserRepository verifyUserRepository;
     private UserService userService;
-    private EmailServiceImpl emailService;
+    private EmailService emailService;
 
     @Autowired
-    public RegisterController(UserRepository userRepository, VerifyUserRepository verifyUserRepository, UserService userService, EmailServiceImpl emailService) {
+    public RegisterController(UserRepository userRepository, VerifyUserRepository verifyUserRepository, UserService userService, EmailService emailService) {
         this.userRepository = userRepository;
         this.verifyUserRepository = verifyUserRepository;
         this.userService = userService;

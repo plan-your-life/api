@@ -1,4 +1,4 @@
-package com.planyourlifeapp.api.services;
+package com.planyourlifeapp.api.service;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
